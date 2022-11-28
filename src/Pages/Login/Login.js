@@ -44,25 +44,25 @@ const Login = () => {
 
 
     return (
-        <div className='h-[500px] flex justify-center items-center'>
-            <div className='w-96 p-7 border'>
+        <div className='h-[500px] flex justify-center items-center text-white'>
+            <div className='w-96 p-7 border rounded-xl bg-gradient-to-b from-primary to-secondary'>
                 <h2 className='text-xl text-center'>Login</h2>
 
                 <form onSubmit={handleSubmit(handleLogin)}>
 
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text text-white">Email</span>
                         </label>
                         <input {...register("email", { required: 'Email Address is required' })} type="email" className="input input-bordered w-full max-w-xs" />
 
-                        {errors.email && <p className='my-2 text-red-600' role="alert">{errors.email?.message}</p>}
+                        {errors.email && <p className='my-2 text-white' role="alert">{errors.email?.message}</p>}
                     </div>
 
 
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="label-text text-white">Password</span>
                         </label>
 
                         <input type="password" {...register("password", {
@@ -70,12 +70,12 @@ const Login = () => {
                             minLength: { value: 6, message: 'Password must be 6 characters or longer' },
                         })} className="input input-bordered w-full max-w-xs" />
 
-                        {errors.password && <p className='my-2 text-red-600' role="alert">{errors.password?.message}</p>}
+                        {errors.password && <p className='my-2 text-white' role="alert">{errors.password?.message}</p>}
 
-                        {loginError && <p className='my-2 text-red-600'>{loginError}</p>}
+                        {loginError && <p className='my-2 text-white'>{loginError}</p>}
 
                         <label className="label">
-                            <span className="label-text">Forget Password</span>
+                            <span className="label-text text-white">Forget Password</span>
                         </label>
 
                     </div>
@@ -85,11 +85,11 @@ const Login = () => {
                     <input className='btn btn-dark w-full' value='Login' type="submit" />
                 </form>
 
-                <p className='mt-3'>New to Doctors Portal ? <Link to='/signup' className='text-secondary'>Create New Account</Link></p>
+                <p className='mt-3'>New to Doctors Portal ? <Link to='/signup' className='text-white hover:text-black'>Create New Account</Link></p>
 
                 <div className="divider">OR</div>
 
-                <button className='btn btn-outline w-full' onClick={() => handleGoogleLogin()}>CONTINUE WITH GOOGLE</button>
+                <button className='btn btn-outline w-full text-white' onClick={() => handleGoogleLogin()}>CONTINUE WITH GOOGLE</button>
 
             </div>
         </div>
