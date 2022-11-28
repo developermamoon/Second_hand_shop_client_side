@@ -8,7 +8,7 @@ const Blogs = () => {
             <div className='mx-20'>
 
                 <div className='mb-10'>
-                    <li className='text-2xl font-semibold my-3'>Difference between SQL and NoSQL</li>
+                    <li className='text-2xl font-semibold my-3'>What are the different ways to manage a state in a React application?</li>
                     <div className="overflow-x-auto">
                         <table className="table table-zebra w-full">
 
@@ -58,7 +58,7 @@ const Blogs = () => {
 
 
                 <div className="mb-10">
-                    <li className='text-2xl font-semibold my-3'>What is JWT, and how does it work?</li>
+                    <li className='text-2xl font-semibold my-3'>How does prototypical inheritance work?</li>
                     <p className='text-justify'>
                         JWT, or JSON Web Token, is an open standard used to share security information between two parties — a client and a server. Each JWT contains encoded JSON objects, including a set of claims. JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued. <br /> <br />
 
@@ -82,7 +82,7 @@ const Blogs = () => {
 
 
                 <div className="mb-10">
-                    <li className='text-2xl font-semibold my-3'>What is the difference between javascript and NodeJS?</li>
+                    <li className='text-2xl font-semibold my-3'>What is a unit test? Why should we write unit tests?</li>
                     <div className="">
                         <table className="table-zebra">
 
@@ -135,7 +135,7 @@ const Blogs = () => {
 
 
                 <div className="mb-10">
-                    <li className='text-2xl font-semibold my-3'>How does NodeJS handle multiple requests at the same time?</li>
+                    <li className='text-2xl font-semibold my-3'>React vs. Angular vs. Vue?</li>
                     <p>
                         NodeJS receives multiple client requests and places them into EventQueue. NodeJS is built with the concept of event-driven architecture. NodeJS has its own EventLoop which is an infinite loop that receives requests and processes them.
                     </p>
