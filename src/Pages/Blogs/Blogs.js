@@ -1,4 +1,5 @@
 import React from 'react';
+import './Blogs.css'
 
 const Blogs = () => {
     return (
@@ -136,9 +137,79 @@ const Blogs = () => {
 
                 <div className="mb-10">
                     <li className='text-2xl font-semibold my-3'>React vs. Angular vs. Vue?</li>
-                    <p>
-                        NodeJS receives multiple client requests and places them into EventQueue. NodeJS is built with the concept of event-driven architecture. NodeJS has its own EventLoop which is an infinite loop that receives requests and processes them.
-                    </p>
+                    <div className="flex justify-center">
+                        <table className="table-zebra">
+
+                            <thead>
+                                <tr>
+                                    <th className='border-2 border-black'>Attributes</th>
+                                    <th className='border-2 border-black'>Angular</th>
+                                    <th className='border-2 border-black'>React</th>
+                                    <th className='border-2 border-black'>Vue</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td className='font-bold border-2 border-black'>Rendering</td>
+                                    <td>Client Side</td>
+                                    <td>Server Side</td>
+                                    <td>Server Side</td>
+                                </tr>
+
+                                <tr>
+                                    <td className='font-bold border-2 border-black'>Model</td>
+                                    <td>MVC</td>
+                                    <td>Virtual</td>
+                                    <td>Virtual</td>
+                                </tr>
+
+                                <tr>
+                                    <td className='font-bold border-2 border-black'>Code Reusability</td>
+                                    <td>Yes</td>
+                                    <td>No. only CSS</td>
+                                    <td>Yes. CSS and HTML</td>
+                                </tr>
+                                <tr>
+                                    <td className='font-bold border-2 border-black'>When to use</td>
+                                    <td>Production, esp, enterprise apps with Material UI</td>
+                                    <td>Production, custom UI apps</td>
+                                    <td>Startups, production</td>
+                                </tr>
+                                <tr>
+                                    <td className='font-bold border-2 border-black'>Performance</td>
+                                    <td>Tik</td>
+                                    <td>Tik</td>
+                                    <td>Tik</td>
+                                </tr>
+                                <tr>
+                                    <td className='font-bold border-2 border-black'>Startup Time</td>
+                                    <td>Longer due to its codebase</td>
+                                    <td>Quick</td>
+                                    <td>Quick</td>
+                                </tr>
+                                <tr>
+                                    <td className='font-bold border-2 border-black'>Complete web apps</td>
+                                    <td>Can be used on standalone basis</td>
+                                    <td>Needs to be integrated with many other tools</td>
+                                    <td>Requires third party tools</td>
+                                </tr>
+                                <tr>
+                                    <td className='font-bold border-2 border-black'>Type</td>
+                                    <td>JS framework</td>
+                                    <td>Open source JS library</td>
+                                    <td>Progressive JS framework</td>
+                                </tr>
+                                <tr>
+                                    <td className='font-bold border-2 border-black'>Coding speed</td>
+                                    <td>Slow</td>
+                                    <td>Normal</td>
+                                    <td>Fast</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
 
