@@ -28,12 +28,16 @@ const Login = () => {
                 setLoginError(err.message);
             })
 
-        googlelogin
+    
+    }
+
+    const handleGoogleLogin = () => {
+        googlelogin()
             .then(res => {
                 const user = res.user;
                 console.log(user)
             })
-            .then(err => {
+            .catch(err => {
                 console.log(err);
             })
     }
@@ -85,7 +89,7 @@ const Login = () => {
 
                 <div className="divider">OR</div>
 
-                <button className='btn btn-outline w-full' onClick={() => googlelogin()}>CONTINUE WITH GOOGLE</button>
+                <button className='btn btn-outline w-full' onClick={() => handleGoogleLogin()}>CONTINUE WITH GOOGLE</button>
 
             </div>
         </div>

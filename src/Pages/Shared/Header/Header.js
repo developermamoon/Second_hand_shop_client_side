@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
+
+    const {user,logOut} = useContext(AuthContext); 
+
+    const handleLogout = () =>{
+        logOut()
+        .then(()=>{})
+        .catch(err=> {
+            console.log(err);
+        })
+    }
+
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -15,10 +27,21 @@ const Header = () => {
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/categories'>Categories</Link></li>
                             <li><Link to='/blogs'>Blogs</Link></li>
+
+                            {user?.uid ?
+                            <>
                             <li><Link to='/dashboard'>DashBoard</Link></li>
+                                    <li><Link onClick={handleLogout} to='/'>Logout</Link></li>
+                            </>
+                            :
+                            <>
                             <li><Link to='/login'>Login</Link></li>
                             <li><Link to='/signup'>SignUp</Link></li>
-                            <li><Link to='/'>Logout</Link></li>
+                            </>
+                            }
+                            
+
+                            
                         </ul>
                     </div>
 
@@ -32,10 +55,18 @@ const Header = () => {
                         <li><Link to= '/'>Home</Link></li>
                         <li><Link to= '/categories'>Categories</Link></li>
                         <li><Link to= '/blogs'>Blogs</Link></li>
-                        <li><Link to= '/dashboard'>DashBoard</Link></li>
-                        <li><Link to= '/login'>Login</Link></li>
-                        <li><Link to= '/signup'>SignUp</Link></li>
-                        <li><Link to= '/'>Logout</Link></li>
+
+                        {user?.uid ?
+                            <>
+                                <li><Link to='/dashboard'>DashBoard</Link></li>
+                                <li><Link onClick={handleLogout} to='/'>Logout</Link></li>
+                            </>
+                            :
+                            <>
+                                <li><Link to='/login'>Login</Link></li>
+                                <li><Link to='/signup'>SignUp</Link></li>
+                            </>
+                        }
                         
                     </ul>
                 </div>

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
@@ -9,6 +9,9 @@ const Signup = () => {
     const { register, formState: { errors }, handleSubmit } = useForm()
     const { createUser, updateUser, googlelogin } = useContext(AuthContext)
     const [signUpError, setSignUpError] = useState('');
+    const navigate2 = useNavigate();
+
+    
 
     const handleSignUp = data => {
         console.log(data);
@@ -18,15 +21,10 @@ const Signup = () => {
             .then(res => {
                 const user = res.user;
                 console.log(user);
-                toast("User Created Succefully");
+                toast.success("User Created Succefully");
 
-                const userInfo = {
-                    displayName: data.name,
-                }
-
-                updateUser(userInfo)
-                    .then(() => { })
-                    .catch(err => { console.log(err) })
+                setName(user, data.name)
+                navigate2('/');
 
             })
             .catch(err => {
@@ -34,12 +32,26 @@ const Signup = () => {
                 setSignUpError(err.message)
             })
 
-        googlelogin
+    }
+
+    const setName = (user, name) =>{
+        const userInfo = {
+            displayName: name
+        }
+
+
+        updateUser(user, userInfo)
+            .then(() => { })
+            .catch(err => console.log(err))
+    }
+
+    const handleGoogleLogin = ()=>{
+        googlelogin()
             .then(res => {
                 const user = res.user;
                 console.log(user)
             })
-            .then(err => {
+            .catch(err => {
                 console.log(err);
             })
     }
@@ -103,7 +115,7 @@ const Signup = () => {
 
                     <div className="divider">OR</div>
 
-                    <button className='btn btn-outline w-full' onClick={() => googlelogin()}>CONTINUE WITH GOOGLE</button>
+                    <button className='btn btn-outline w-full' onClick={() => handleGoogleLogin()}>CONTINUE WITH GOOGLE</button>
 
                 </div>
             </div>
