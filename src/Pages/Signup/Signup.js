@@ -21,7 +21,7 @@ const Signup = () => {
             .then(res => {
                 const user = res.user;
                 console.log(user);
-                toast.success("User Created Succefully");
+                toast.success(`Welcome ${data.name} !`);
 
                 setName(user, data.name)
                 navigate2('/');
@@ -60,33 +60,33 @@ const Signup = () => {
     return (
         <div>
             <div className='h-[600px] flex justify-center items-center'>
-                <div className='w-96 p-7 border rounded-xl bg-gradient-to-b from-primary to-secondary'>
-                    <h2 className='text-xl text-center text-white'>Sign Up</h2>
+                <div className='w-96 p-7 border rounded-xl my-10'>
+                    <h2 className='text-xl text-center'>Sign Up</h2>
 
                     <form onSubmit={handleSubmit(handleSignUp)}>
 
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text text-white">Name</span>
+                                <span className="label-text">Name</span>
                             </label>
                             <input {...register("name", { required: 'Name is required' })} type="text" className="input input-bordered w-full max-w-xs" />
 
-                            {errors.name && <p className='my-2 text-white' role="alert">{errors.name?.message}</p>}
+                            {errors.name && <p className='my-2 text-red-600' role="alert">{errors.name?.message}</p>}
                         </div>
 
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text text-white">Email</span>
+                                <span className="label-text ">Email</span>
                             </label>
                             <input {...register("email", { required: 'Email Address is required' })} type="email" className="input input-bordered w-full max-w-xs" />
 
-                            {errors.email && <p className='my-2 text-white' role="alert">{errors.email?.message}</p>}
+                            {errors.email && <p className='my-2 text-red-600' role="alert">{errors.email?.message}</p>}
                         </div>
 
 
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text text-white">Password</span>
+                                <span className="label-text ">Password</span>
                             </label>
 
                             <input type="password" {...register("password", {
@@ -94,14 +94,14 @@ const Signup = () => {
                                 minLength: { value: 6, message: 'Password must be 6 characters or longer' },
                             })} className="input input-bordered w-full max-w-xs" />
 
-                            {errors.password && <p className='my-2 text-white' role="alert">{errors.password?.message}</p>}
+                            {errors.password && <p className='my-2 ' role="alert">{errors.password?.message}</p>}
 
                             <label className="label">
-                                <span className="label-text text-white">Forget Password</span>
+                                <span className="label-text ">Forget Password</span>
                             </label>
 
                             {
-                                signUpError && <p className='text-white'>{signUpError}</p>
+                                signUpError && <p className=''>{signUpError}</p>
                             }
 
                         </div>
@@ -111,11 +111,11 @@ const Signup = () => {
                         <input className='btn btn-dark w-full' value='Sign up' type="submit" />
                     </form>
 
-                    <p className='mt-3 text-white'>Already have an account ? <Link to='/login' className='text-white hover:text-black'>Login</Link></p>
+                    <p className='mt-3'>Already have an account ? <Link to='/login' >Login</Link></p>
 
-                    <div className="divider text-white">OR</div>
+                    <div className="divider">OR</div>
 
-                    <button className='btn btn-outline w-full text-white' onClick={() => handleGoogleLogin()}>CONTINUE WITH GOOGLE</button>
+                    <button className='btn btn-outline w-full' onClick={() => handleGoogleLogin()}>CONTINUE WITH GOOGLE</button>
 
                 </div>
             </div>

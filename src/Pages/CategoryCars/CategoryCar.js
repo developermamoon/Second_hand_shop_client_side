@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SedanCar = ({data}) => {
+const CategoryCar = ({data}) => {
     const { _id, model_name, img, location, resale_price, original_price, years_of_use, posting_time, Seller_name, description } = data;
     return (
         <div>
@@ -24,4 +24,4 @@ const SedanCar = ({data}) => {
     );
 };
 
-export default SedanCar;
+export default CategoryCar;
