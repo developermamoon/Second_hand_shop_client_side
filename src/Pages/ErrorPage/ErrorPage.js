@@ -1,10 +1,9 @@
 import React from 'react';
-import image from '../../Images/404 banners.jpg'
 
 const ErrorPage = () => {
     return (
         <div className='flex justify-center my-20'>
-            <img src={image} alt="" />
+            <img src='https://i.ibb.co/LNnZz8B/404-banners.jpg' alt="" />
         </div>
     );
 };

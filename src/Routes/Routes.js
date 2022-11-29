@@ -17,7 +17,7 @@ export const router = createBrowserRouter([
             { path: '/signup', element: <Signup></Signup> },
             { path: '/dashboard', element: <Signup></Signup> },
             { path: '/blogs', element: <Blogs></Blogs> },
-            { path: '/category/:id', element: <SedanCars></SedanCars>, loader: () => fetch(`SedanData.json`)},
+            { path: '/category/:id', element: <SedanCars></SedanCars>, loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)},
         ]
     },
     { path: '*', element: <ErrorPage></ErrorPage> },
