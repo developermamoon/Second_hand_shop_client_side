@@ -1,10 +1,4 @@
 import React from 'react';
-import car1 from '../../../Images/Cars/sedan.jpg';
-import car2 from '../../../Images/Cars/suv.jpg';
-import car3 from '../../../Images/Cars/supercar.jpg';
-import car4 from '../../../Images/Cars/pickup.jpg';
-import car5 from '../../../Images/Cars/van.jpg';
-import car6 from '../../../Images/Cars/Minibus.jpg';
 import ProductCategory from './ProductCategory';
 
 const ProductCategories = () => {
@@ -13,38 +7,32 @@ const ProductCategories = () => {
         {
             _id: 1,
             category_name: "Sedan",
-            color: 'bg-primary',
-            image: car1
+            color: 'bg-primary'
         },
         {
             _id: 2,
             category_name: "SUV",
-            color: 'bg-accent',
-            image: car2
+            color: 'bg-accent'
         },
         {
             _id: 3,
             category_name: "Microbus",
-            color: 'bg-secondary',
-            image: car3
+            color: 'bg-secondary'
         },
         {
             _id: 4,
             category_name: "Pickup",
-            color: 'bg-secondary',
-            image: car4
+            color: 'bg-secondary'
         },
         {
             _id: 5,
             category_name: "Van",
-            color: 'bg-gradient-to-r from-primary to-secondary',
-            image: car5
+            color: 'bg-gradient-to-r from-primary to-secondary'
         },
         {
             _id: 6,
             category_name: "Super Cars",
-            color: 'bg-accent',
-            image: car6
+            color: 'bg-accent'
         },
     ]
     return (

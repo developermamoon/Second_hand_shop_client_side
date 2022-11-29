@@ -5,6 +5,7 @@ import Blogs from '../Pages/Blogs/Blogs';
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
+import SedanCars from '../Pages/SedanCars/SedanCars';
 import Signup from '../Pages/Signup/Signup';
 
 
@@ -16,7 +17,7 @@ export const router = createBrowserRouter([
             { path: '/signup', element: <Signup></Signup> },
             { path: '/dashboard', element: <Signup></Signup> },
             { path: '/blogs', element: <Blogs></Blogs> },
-            { path: '/category/:id', element: <Blogs></Blogs>, loader: ({params})=> fetch()},
+            { path: '/category/:id', element: <SedanCars></SedanCars>, loader: () => fetch(`SedanData.json`)},
         ]
     },
     { path: '*', element: <ErrorPage></ErrorPage> },
