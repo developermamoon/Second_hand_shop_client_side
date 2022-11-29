@@ -16,6 +16,7 @@ export const router = createBrowserRouter([
             { path: '/signup', element: <Signup></Signup> },
             { path: '/dashboard', element: <Signup></Signup> },
             { path: '/blogs', element: <Blogs></Blogs> },
+            { path: '/category/:id', element: <Blogs></Blogs>, loader: ({params})=> fetch()},
         ]
     },
     { path: '*', element: <ErrorPage></ErrorPage> },
