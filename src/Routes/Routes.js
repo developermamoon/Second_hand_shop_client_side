@@ -5,9 +5,10 @@ import Blogs from '../Pages/Blogs/Blogs';
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
-import SedanCars from '../Pages/CategoryCars/CategoryCars';
 import Signup from '../Pages/Signup/Signup';
 import PrivateRoute from './PrivateRoute';
+import CategoryCars from '../Pages/CategoryCars/CategoryCars';
+import CategoriesPage from '../Pages/CategoriesPage/CategoriesPage';
 
 
 export const router = createBrowserRouter([
@@ -18,7 +19,8 @@ export const router = createBrowserRouter([
             { path: '/signup', element: <Signup></Signup> },
             { path: '/dashboard', element: <Signup></Signup> },
             { path: '/blogs', element: <Blogs></Blogs> },
-            { path: '/category/:id', element: <PrivateRoute><SedanCars></SedanCars></PrivateRoute>, loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)},
+            { path: '/categories', element: <CategoriesPage></CategoriesPage> },
+            { path: '/category/:id', element: <PrivateRoute><CategoryCars></CategoryCars></PrivateRoute>, loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)},
         ]
     },
     { path: '*', element: <ErrorPage></ErrorPage> },

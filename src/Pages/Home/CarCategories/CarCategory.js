@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ProductCategory = ({data}) => {
+const CarCategory = ({data}) => {
     const {_id,category_name, color, image}  = data;
     return (
         <div>
@@ -15,4 +15,4 @@ const ProductCategory = ({data}) => {
     );
 };
 
-export default ProductCategory;
+export default CarCategory;

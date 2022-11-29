@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import ProductCategory from './ProductCategory';
+import CarCategory from './CarCategory';
 
-const ProductCategories = () => {
+const CarCategories = () => {
 
     const [categories, setCategories] = useState([]);
 
@@ -14,10 +14,11 @@ const ProductCategories = () => {
     
     return (
         <div className='container mx-auto my-10'>
+            <h1 className='text-center my-8 font-bold text-4xl'>Car Categories</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
                 {
                     categories.map(data =>
-                        <ProductCategory key={data._id} data={data}></ProductCategory>
+                        <CarCategory key={data._id} data={data}></CarCategory>
                     )
                 }
             </div>
@@ -25,4 +26,4 @@ const ProductCategories = () => {
     );
 };
 
-export default ProductCategories;
+export default CarCategories;
