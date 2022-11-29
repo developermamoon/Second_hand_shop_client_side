@@ -32,7 +32,7 @@ const Footer = () => {
 
             <footer className="footer footer-center p-4 bg-black text-white">
                 <div>
-                    <p>Copyright © 2022 - All right reserved by Dream Car</p>
+                    <p>Copyright © 2022 - All right reserved by SellAnyCar.com</p>
                 </div>
             </footer>
         </div>

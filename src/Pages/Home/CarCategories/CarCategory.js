@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CarCategory = ({data}) => {
-    const {_id,category_name, color, image}  = data;
+    const {_id,category_name, color}  = data;
     return (
         <div>
             <Link to={`/category/${_id}`} className={`card h-full p-6 text-white md:card-side shadow-xl ${color}`}>

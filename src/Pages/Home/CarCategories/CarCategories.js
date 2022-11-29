@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react';
 import CarCategory from './CarCategory';
 
 const CarCategories = () => {
-
     const [categories, setCategories] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/category')
+        fetch('https://second-hand-shop-server.vercel.app/categories')
         .then(res => res.json())
         .then(data => setCategories(data));
         
@@ -18,7 +17,7 @@ const CarCategories = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
                 {
                     categories.map(data =>
-                        <CarCategory key={data._id} data={data}></CarCategory>
+                        <CarCategory key={data._id} data={data} ></CarCategory>
                     )
                 }
             </div>

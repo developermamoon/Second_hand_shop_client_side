@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../Layout/Main';
 import Blogs from '../Pages/Blogs/Blogs';
@@ -7,11 +7,11 @@ import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
 import Signup from '../Pages/Signup/Signup';
 import PrivateRoute from './PrivateRoute';
-import CategoryCars from '../Pages/CategoryCars/CategoryCars';
 import CategoriesPage from '../Pages/CategoriesPage/CategoriesPage';
-
+import CategoryWiseCars from '../Pages/CategoryCars/CategoryWiseCars';
 
 export const router = createBrowserRouter([
+    
     {
         path: '/', element: <Main></Main>, children: [
             { path: '/', element: <Home></Home> },
@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
             { path: '/dashboard', element: <Signup></Signup> },
             { path: '/blogs', element: <Blogs></Blogs> },
             { path: '/categories', element: <CategoriesPage></CategoriesPage> },
-            { path: '/category/:id', element: <PrivateRoute><CategoryCars></CategoryCars></PrivateRoute>, loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)},
+            { path: '/category/:id', element: <PrivateRoute><CategoryWiseCars></CategoryWiseCars></PrivateRoute>, loader: ({params}) => fetch(`https://second-hand-shop-server.vercel.app/category/${params.id}`)},
         ]
     },
     { path: '*', element: <ErrorPage></ErrorPage> },

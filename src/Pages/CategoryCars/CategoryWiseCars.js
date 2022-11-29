@@ -1,18 +1,19 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import CategoryCar from './CategoryCar';
+import CategoryWiseCar from './CategoryWiseCar';
 
-const CategoryCars = () => {
+const CategoryWiseCars = () => {
 
     const categoryCarsData = useLoaderData();
    
     return (
         <div>
+            <h1>{}</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-2 my-10 justify-items-center'>
-                {categoryCarsData.map(data => <CategoryCar data={data} key={data._id}></CategoryCar>)}
+                {categoryCarsData.map(data => <CategoryWiseCar data={data} key={data._id}></CategoryWiseCar>)}
             </div>
         </div>
     );
 };
 
-export default CategoryCars;
+export default CategoryWiseCars;

@@ -46,7 +46,7 @@ const Header = () => {
                     </div>
 
                     {/* company name and logo -------------------- */}
-                    <Link to='/' className="btn btn-ghost text-white normal-case text-xl">Dream Car</Link>
+                    <Link to='/' className="btn btn-ghost text-white normal-case text-xl">SellAnyCar.com</Link>
                 </div>
 
 
