@@ -46,13 +46,13 @@ const Login = () => {
     return (
         <div className='my-10 flex justify-center items-center'>
             <div className='w-96 p-7 border rounded-xl'>
-                <h2 className='text-xl text-center'>Login</h2>
+                <h2 className='text-xl text-center text-white'>Login</h2>
 
                 <form onSubmit={handleSubmit(handleLogin)}>
 
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text text-white">Email</span>
                         </label>
                         <input {...register("email", { required: 'Email Address is required' })} type="email" className="input input-bordered w-full max-w-xs" />
 
@@ -62,7 +62,7 @@ const Login = () => {
 
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="label-text text-white">Password</span>
                         </label>
 
                         <input type="password" {...register("password", {
@@ -75,21 +75,21 @@ const Login = () => {
                         {loginError && <p className='my-2 text-red-600'>{loginError}</p>}
 
                         <label className="label">
-                            <span className="label-text">Forget Password</span>
+                            <span className="label-text text-white">Forget Password</span>
                         </label>
 
                     </div>
 
 
 
-                    <input className='btn btn-dark w-full' value='Login' type="submit" />
+                    <input className='btn btn-dark w-full text-white' value='Login' type="submit" />
                 </form>
 
-                <p className='mt-3'>New to Doctors Portal ? <Link to='/signup' className='text-white hover:text-black'>Create New Account</Link></p>
+                <p className='mt-3 text-white'>New to Doctors Portal ? <Link to='/signup' className='text-white hover:text-red-600'>Create New Account</Link></p>
 
-                <div className="divider">OR</div>
+                <div className="divider text-white">OR</div>
 
-                <button className='btn btn-outline w-full' onClick={() => handleGoogleLogin()}>CONTINUE WITH GOOGLE</button>
+                <button className='btn btn-outline w-full text-white' onClick={() => handleGoogleLogin()}>CONTINUE WITH GOOGLE</button>
 
             </div>
         </div>

@@ -61,13 +61,13 @@ const Signup = () => {
         <div>
             <div className='h-[600px] flex justify-center items-center'>
                 <div className='w-96 p-7 border rounded-xl my-10'>
-                    <h2 className='text-xl text-center'>Sign Up</h2>
+                    <h2 className='text-xl text-center text-white'>Sign Up</h2>
 
                     <form onSubmit={handleSubmit(handleSignUp)}>
 
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="label-text text-white">Name</span>
                             </label>
                             <input {...register("name", { required: 'Name is required' })} type="text" className="input input-bordered w-full max-w-xs" />
 
@@ -76,7 +76,7 @@ const Signup = () => {
 
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text ">Email</span>
+                                <span className="label-text text-white">Email</span>
                             </label>
                             <input {...register("email", { required: 'Email Address is required' })} type="email" className="input input-bordered w-full max-w-xs" />
 
@@ -86,7 +86,7 @@ const Signup = () => {
 
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text ">Password</span>
+                                <span className="label-text text-white">Password</span>
                             </label>
 
                             <input type="password" {...register("password", {
@@ -97,7 +97,7 @@ const Signup = () => {
                             {errors.password && <p className='my-2 ' role="alert">{errors.password?.message}</p>}
 
                             <label className="label">
-                                <span className="label-text ">Forget Password</span>
+                                <span className="label-text text-white">Forget Password</span>
                             </label>
 
                             {
@@ -108,14 +108,14 @@ const Signup = () => {
 
 
 
-                        <input className='btn btn-dark w-full' value='Sign up' type="submit" />
+                        <input className='btn btn-dark w-full text-white' value='Sign up' type="submit" />
                     </form>
 
-                    <p className='mt-3'>Already have an account ? <Link to='/login' >Login</Link></p>
+                    <p className='mt-3 text-white'>Already have an account ? <Link to='/login' className='text-white hover:text-red-600' >Login</Link></p>
 
-                    <div className="divider">OR</div>
+                    <div className="divider text-white">OR</div>
 
-                    <button className='btn btn-outline w-full' onClick={() => handleGoogleLogin()}>CONTINUE WITH GOOGLE</button>
+                    <button className='btn btn-outline w-full text-white' onClick={() => handleGoogleLogin()}>CONTINUE WITH GOOGLE</button>
 
                 </div>
             </div>
