@@ -9,7 +9,7 @@ const CategoryWiseCars = () => {
     return (
         <div>
             <h1>{}</h1>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-2 my-10 justify-items-center'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-2 gap-y-10 my-10 justify-items-center'>
                 {categoryCarsData.map(data => <CategoryWiseCar data={data} key={data._id}></CategoryWiseCar>)}
             </div>
         </div>
