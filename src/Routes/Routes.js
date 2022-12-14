@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
             { path: '/dashboard', element: <Signup></Signup> },
             { path: '/blogs', element: <Blogs></Blogs> },
             { path: '/categories', element: <CategoriesPage></CategoriesPage> },
-            { path: '/category/:id', element: <PrivateRoute><CategoryWiseCars></CategoryWiseCars></PrivateRoute>, loader: ({params}) => fetch(`https://second-hand-shop-server.vercel.app/category/${params.id}`)},
+            { path: '/category/:id', element: <PrivateRoute><CategoryWiseCars></CategoryWiseCars></PrivateRoute>, loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)},
         ]
     },
     { path: '*', element: <ErrorPage></ErrorPage> },
