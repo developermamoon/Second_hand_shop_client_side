@@ -16,7 +16,8 @@ const CategoryWiseCar = ({data}) => {
                     <p><b>Posting Time:</b> {posting_time}</p>
                     <p className='text-justify'><b>Description: <br /></b> {description}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                        {/* <button className="btn btn-primary">Book Now</button> */}
+                        <label htmlFor="my-modal-6" className="btn btn-primary">Book Now</label>
                     </div>
                 </div>
             </div>
