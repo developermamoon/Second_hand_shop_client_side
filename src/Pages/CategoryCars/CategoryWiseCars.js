@@ -42,7 +42,7 @@ const CategoryWiseCars = () => {
 
         // console.log(Booker);
 
-        fetch('http://localhost:5000/bookingCar', {
+        fetch('https://second-hand-shop-server.vercel.app/bookingCar', {
             method: "POST",
             headers: {
                 'content-type': "application/json",
