@@ -1,7 +1,9 @@
-About this Project: 
+****About this Project: ****
+
 In this project we can buy and sell all kind of second hand cars.
 
-Features and Functionalities: 
+**Features and Functionalities: **
+
  -> Users can buy and sell their used cars.
 
  -> People can sell second hand cars here.
@@ -17,4 +19,4 @@ Features and Functionalities:
  -> There will be options for admins and random users also. 
 
 
-Live Link: https://second-hand-shop-612aa.web.app/
+**Live Link:** https://second-hand-shop-612aa.web.app/
